@@ -133,10 +133,6 @@ if (session=='morning'){
 //     return bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${medication} medicine for ${session}`)
 // }
 
-// storing db data
-
-const client = new MongoClient(dbConnectionStr)
-
 // alert scheduler code 
 
 cron.schedule(alertTime, async function checkMeds(){
