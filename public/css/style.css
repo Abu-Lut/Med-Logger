@@ -42,10 +42,11 @@ h1,.one,.two,.three,.two form{
 
 input{
   margin-block: 2rem;
-  box-shadow: 19px 18px 33px 1px rgba(0,0,0,0.3);
+  box-shadow: 19px 18px 33px 1px rgba(0,0,0,0.2);
   padding: .5rem;
   width: 70%;
   margin-inline:10%;
+  border-radius: 4px;
 }
 
 
@@ -60,12 +61,15 @@ input{
     font-size: 2.6rem;
   }
 
-  .two form *{
-    display: inline;
+  .two form {
+    flex-direction: row;
+    width: 10%;
   }
 
   input{
-    margin-block: 0;
+    margin-block: 1rem;
+    display: inline-block;
+    width: fit-content;
   }
 }
 
