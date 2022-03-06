@@ -125,7 +125,7 @@ if (session=='morning'){
 }else if (session=='afternoon'){
     alertTime = '0 0/20 14 * * *' 
 }else if (session=='night'){
-    alertTime = '0 * 18,20,22 * * *' 
+    alertTime = '0 0/15 20,22 * * *' 
 }
 
 // messages to be sent 
