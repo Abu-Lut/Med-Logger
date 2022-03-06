@@ -17,3 +17,7 @@ backend
 - update UI based on session
 
 - telegram api to send messages on completion of half session without session medicines being cleared
+
+
+    "medName":"Dolo"
+    "medTimings":["afternoon","night"]

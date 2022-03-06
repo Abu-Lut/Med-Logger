@@ -16,11 +16,11 @@ html{
 /*******************************************/
 
 body{
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Poppins', sans-serif;
 }
 
-h1,.one,.two,.three{
+h1,.one,.two,.three,.two form{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +40,14 @@ h1,.one,.two,.three{
   color: green;
 }
 
-@media all and (min-width: 1200px){
+input{
+  margin-block: 2rem;
+  box-shadow: 19px 18px 33px 1px rgba(0,0,0,0.3);
+  padding: .5rem;
+}
+
+
+@media all and (min-width: 1000px){
   body{
     font-size: 2rem;
   }
@@ -49,6 +56,14 @@ h1,.one,.two,.three{
   }
   .x{
     font-size: 2.6rem;
+  }
+
+  .two form{
+    display: inline;
+  }
+
+  input{
+    margin-block: 0;
   }
 }
 

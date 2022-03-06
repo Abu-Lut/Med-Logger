@@ -104,6 +104,7 @@ let session = ''
 
 let time = (new Date()).getHours()
 console.log(`time is ${time}`)
+let today = `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDate()}`
 
 // finding which part of the day it is
 
@@ -124,7 +125,7 @@ if (session=='morning'){
 }else if (session=='afternoon'){
     alertTime = '0 0/20 14 * * *' 
 }else if (session=='night'){
-    alertTime = '0 0/20 20 * * *' 
+    alertTime = '0 * 18,20,22 * * *' 
 }
 
 // messages to be sent 
@@ -143,7 +144,7 @@ cron.schedule(alertTime, async function checkMeds(){
 
     if (result){
         await result.forEach(item => {
-            bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${item.medName} medicine for ${session}`)
+            bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${item.medName} medicine this ${session} on ${today}, please remind her to take her medicines`)
                 }
             )
         }
@@ -151,4 +152,15 @@ cron.schedule(alertTime, async function checkMeds(){
         scheduled: true,
         timezone: "Asia/Colombo"
       }
-)        
+)
+
+cron.schedule('0 59 23 * * *', async function run() {
+    let filter = {}
+    let updateDoc = {
+        $set:{
+            medStatus: "false"
+        }
+    }
+    const result = await db.collection("Medicines").updateMany(filter, updateDoc);
+    console.log(`Updated ${result.modifiedCount} documents to false`);
+})
