@@ -151,5 +151,8 @@ cron.schedule(alertTime, async function checkMeds(){
                 }
             )
         }
-    }
+    },{
+        scheduled: true,
+        timezone: "Asia/Colombo"
+      }
 )        
