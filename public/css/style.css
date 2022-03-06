@@ -18,6 +18,7 @@ html{
 body{
   font-size: 5rem;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 h1,.one,.two,.three,.two form{
