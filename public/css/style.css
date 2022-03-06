@@ -44,6 +44,8 @@ input{
   margin-block: 2rem;
   box-shadow: 19px 18px 33px 1px rgba(0,0,0,0.3);
   padding: .5rem;
+  width: 70%;
+  margin-inline:10%;
 }
 
 
