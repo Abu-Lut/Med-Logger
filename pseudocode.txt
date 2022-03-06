@@ -1,0 +1,19 @@
+frontend
+
+- Live UI
+  - show medicines for that particular time session with 'CLEAR' button (if medicine is not cleared within halfway of it's session, then telegram notif will be sent to 3 daughters and 1 son asking them to remind dadi to take the medicine)
+
+- input form
+  - input medicine name and timings (morning, afternoon or night) to take medicine
+
+- logs table
+  - create a simple table showing whether medicines were taken or not for the past few days/weeks/months ?
+
+
+backend
+
+- store medicines and their time sessions
+
+- update UI based on session
+
+- telegram api to send messages on completion of half session without session medicines being cleared

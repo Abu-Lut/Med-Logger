@@ -1,0 +1,60 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,.one,.two,.three{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.check,.x{
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.x{
+  font-size: 4.3rem;
+}
+
+.done{
+  color: green;
+}
+
+@media all and (min-width: 1200px){
+  body{
+    font-size: 2rem;
+  }
+  .check{
+    font-size: 3rem;
+  }
+  .x{
+    font-size: 2.6rem;
+  }
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
