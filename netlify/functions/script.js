@@ -14,7 +14,7 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
 
 const {schedule} = require('@netlify/functions')
 
-schedule(alertTime, async function checkMeds(){
+schedule("* * * * *", async function checkMeds(){
     console.log("first try bismillaah")
     const result = await db.collection("Medicines").find({
         medTiming: session,
@@ -27,8 +27,5 @@ schedule(alertTime, async function checkMeds(){
                 }
             )
         }
-    },{
-        scheduled: true,
-        timezone: "Asia/Colombo"
-      }
+    }
 )
