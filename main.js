@@ -155,31 +155,31 @@ if (session=='morning'){
 //       }
 // )
 
-schedule(alertTime, async function checkMeds(){
-    const result = await db.collection("Medicines").find({
-        medTiming: session,
-        medStatus: "false"
-    })
+// schedule(alertTime, async function checkMeds(){
+//     const result = await db.collection("Medicines").find({
+//         medTiming: session,
+//         medStatus: "false"
+//     })
 
-    if (result){
-        await result.forEach(item => {
-            bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${item.medName} medicine this ${session} on ${today}, please remind her to take her medicines`)
-                }
-            )
-        }
-    },{
-        scheduled: true,
-        timezone: "Asia/Colombo"
-      }
-)
+//     if (result){
+//         await result.forEach(item => {
+//             bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${item.medName} medicine this ${session} on ${today}, please remind her to take her medicines`)
+//                 }
+//             )
+//         }
+//     },{
+//         scheduled: true,
+//         timezone: "Asia/Colombo"
+//       }
+// )
 
-cron.schedule('0 59 23 * * *', async function run() {
-    let filter = {}
-    let updateDoc = {
-        $set:{
-            medStatus: "false"
-        }
-    }
-    const result = await db.collection("Medicines").updateMany(filter, updateDoc);
-    console.log(`Updated ${result.modifiedCount} documents to false`);
-})
+// cron.schedule('0 59 23 * * *', async function run() {
+//     let filter = {}
+//     let updateDoc = {
+//         $set:{
+//             medStatus: "false"
+//         }
+//     }
+//     const result = await db.collection("Medicines").updateMany(filter, updateDoc);
+//     console.log(`Updated ${result.modifiedCount} documents to false`);
+// })

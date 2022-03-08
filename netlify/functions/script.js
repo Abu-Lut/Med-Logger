@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient
+require('dotenv').config()
 let db,
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'Medicines'
