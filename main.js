@@ -121,11 +121,11 @@ if (time>= 0 && time<=8) {
 let alertTime = ''
 
 if (session=='morning'){
-    alertTime = '0 */15 8 * * *' 
+    alertTime = '0 */10 0 * * *' 
 }else if (session=='afternoon'){
     alertTime = '0 */15 14 * * *' 
 }else if (session=='night'){
-    alertTime = '0 */10 21,23 * * *' 
+    alertTime = '0 */15 21,23 * * *' 
 }
 
 // messages to be sent 
