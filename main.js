@@ -89,6 +89,7 @@ app.listen(process.env.PORT || PORT, ()=>{
 
 const TelegramBot = require('node-telegram-bot-api');
 const cron = require('node-cron')
+const {schedule} = require('@netlify/functions')
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '5212873622:AAGNKMGw2heq_EVvV469-eccR6ay_PKOreI';
@@ -136,7 +137,25 @@ if (session=='morning'){
 
 // alert scheduler code 
 
-cron.schedule(alertTime, async function checkMeds(){
+// cron.schedule(alertTime, async function checkMeds(){
+//     const result = await db.collection("Medicines").find({
+//         medTiming: session,
+//         medStatus: "false"
+//     })
+
+//     if (result){
+//         await result.forEach(item => {
+//             bot.sendMessage(chatId, `Munavar Sultana hasn't taken her ${item.medName} medicine this ${session} on ${today}, please remind her to take her medicines`)
+//                 }
+//             )
+//         }
+//     },{
+//         scheduled: true,
+//         timezone: "Asia/Colombo"
+//       }
+// )
+
+schedule(alertTime, async function checkMeds(){
     const result = await db.collection("Medicines").find({
         medTiming: session,
         medStatus: "false"
