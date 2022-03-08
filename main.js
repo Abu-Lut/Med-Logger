@@ -121,7 +121,7 @@ if (time>= 0 && time<=8) {
 let alertTime = ''
 
 if (session=='morning'){
-    alertTime = '0 */15 8 * * *' 
+    alertTime = '0 * 1,2 * * *' 
 }else if (session=='afternoon'){
     alertTime = '0 */15 14 * * *' 
 }else if (session=='night'){
