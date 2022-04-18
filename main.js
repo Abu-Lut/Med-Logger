@@ -155,7 +155,7 @@ if (session=='morning'){
 //       }
 // )
 
-export const handler = schedule("* * * * *", async function checkMeds(){
+const handler = schedule("* * * * *", async function checkMeds(){
     console.log("first try bismillaah")
     const result = await db.collection("Medicines").find({
         medTiming: session,
