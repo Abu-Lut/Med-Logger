@@ -1,10 +1,10 @@
-## Med Logger
+# Med Logger
 
-# Why I created this app
+## Why I created this app
 
 This project was created for one simple reason: To help my grandmother take her medications on time, so I came up with a full-stack solution to ensure this.
 
-# What this code sample does:
+## What this code sample does:
 So the backend, does 2 things:
 1. Serves medication information to the front end (https://med-logger.herokuapp.com/)
 2. Sends notifications to a family telegram channel
