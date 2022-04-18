@@ -9,7 +9,7 @@ So the backend, does 2 things:
 1. Serves medication information to the front end (https://med-logger.herokuapp.com/)
 2. Sends notifications to a family telegram channel
 
-A Telegram bot API is used to send notifications to a=the telegram channel, if she forgets to update her medication status to "taken" in the website (hosted through heroku), this process repeats at 5 minute intervals until she takes her medication.
+A Telegram bot API is used to send notifications to the telegram channel if she forgets to update her medication status to "taken" in the website (hosted through heroku). This process repeats at 5 minute intervals for 1 hour until she takes her medication.
 
 The backend runs this process during her medication times (morning, afternoon or night) using a cron job package in nodejs.
 
